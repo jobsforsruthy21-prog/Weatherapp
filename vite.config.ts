@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Weatherapp/',
   plugins: [
     vue(),
     vueDevTools(),
@@ -14,5 +15,9 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+    build: {
+      outDir: 'docs',
+
   },
 })
